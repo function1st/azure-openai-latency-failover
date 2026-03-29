@@ -1,0 +1,22 @@
+{
+  "name": "aoai-latency-probe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc",
+    "start": "func start",
+    "prestart": "npm run build"
+  },
+  "dependencies": {
+    "@ai-sdk/azure": "^1",
+    "ai": "^4",
+    "@azure/functions": "^4",
+    "@azure/identity": "^4",
+    "applicationinsights": "^3"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}

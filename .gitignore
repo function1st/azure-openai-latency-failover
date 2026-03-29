@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.funcignore
+
+# Local settings (contains local dev config)
+src/probe-function/local.settings.json
+scripts/.env
+
+# Personal parameter files (contain subscription IDs, tenant IDs, resource names)
+# poc.bicepparam is committed with placeholder values as a template.
+# Copy it to local.bicepparam and fill in your real values.
+infra/*.bicepparam
+!infra/poc.bicepparam
+infra/*.parameters.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Azure Functions
+bin/
+obj/
+
+# Bicep compiled output (use source .bicep files)
+*.json
+!infra/workbook.json
+!**/package.json
+!**/package-lock.json
+!**/tsconfig.json
+!**/host.json
+!**/.github/**
+
+# Logs
+*.log

@@ -1,0 +1,19 @@
+name: Validate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  validate-bicep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Bicep
+        run: az bicep build -f infra/main.bicep
+
+      - name: Lint Bicep
+        run: az bicep lint -f infra/main.bicep
